@@ -1,5 +1,5 @@
 [org 0x7c00]
-jmp PrintStr
+jmp PrintClear
 
 ; ======================
 
@@ -64,6 +64,23 @@ PrintStr:
   end: jmp $
 
   var: db "Hello World", 0
+
+; ======================
+
+PrintClear:
+
+  mov ah, 0x00
+  mov al, 0x03
+  int 0x10
+
+  mov ah, 0x06
+  mov al, 0x00
+  mov bh, 0x07
+  mov cx, 0x00
+  mov dx, 0x184f
+  int 0x10
+
+  jmp $
 
 ; ======================
 
