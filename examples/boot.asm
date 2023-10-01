@@ -63,7 +63,7 @@ PrintStr:
 
   end: jmp $
 
-  var: db "Hello World", 0
+  var: db "Text Here", 0
 
 ; ======================
 
